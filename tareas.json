@@ -1,0 +1,5 @@
+[
+  { "id": 1, "titulo": "Comprar pan", "completada": false },
+  { "id": 2, "titulo": "Estudiar Node.js", "completada": true },
+  { "id": 3, "titulo": "Terminar la práctica", "completada": false }
+]
