@@ -1,6 +1,8 @@
-# Prueba práctica - Desarrollo de APIs con Express y MySQL
+# Examen de programación - Teoría y práctica
 
-API de tareas hecha con Node.js y Express, más las consultas SQL del ejercicio 5.
+Resolución completa del examen. La parte teórica está en `teoria.md` y la parte
+práctica es la API de tareas hecha con Node.js y Express, más las consultas SQL
+del ejercicio 5.
 
 ## Puesta en marcha
 
