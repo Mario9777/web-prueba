@@ -1,5 +1,5 @@
 -- =========================================================
--- EJERCICIO 5 - Consultas básicas a la base de datos (tienda)
+-- EJERCICIO 5 - Consultas básicas SQL a la base de datos (tienda)
 -- =========================================================
 USE tienda;
 
@@ -12,7 +12,7 @@ SELECT * FROM productos;
 -- 3. Mostrar productos con precio mayor de 50
 SELECT * FROM productos WHERE precio > 50;
 
--- 4. Mostrar clientes de 'Madrid'
+-- 4. Mostrar clientes de "Madrid"
 SELECT * FROM clientes WHERE ciudad = 'Madrid';
 
 -- 5. Productos ordenados por precio (descendente)
@@ -24,16 +24,20 @@ SELECT * FROM clientes ORDER BY nombre ASC;
 -- 7. Productos con stock menor de 10
 SELECT * FROM productos WHERE stock < 10;
 
--- 8. Clientes cuyo email termine en 'gmail.com'
-SELECT * FROM clientes WHERE email LIKE '%gmail.com';
+-- 8. Clientes cuyo email termina en "@gmail.com"
+SELECT * FROM clientes WHERE email LIKE '%@gmail.com';
 
--- 9. Insertar 1 cliente
-INSERT INTO clientes (nombre, email, ciudad)
-VALUES ('Pedro Gómez', 'pedro@gmail.com', 'Bilbao');
+-- 9. Insertar 3 clientes
+INSERT INTO clientes (nombre, email, ciudad) VALUES
+('Pedro Gómez', 'pedro@gmail.com', 'Bilbao'),
+('Sara Díaz', 'sara@hotmail.com', 'Zaragoza'),
+('Marcos Vidal', 'marcos@yahoo.com', 'Valencia');
 
--- 10. Insertar 1 producto
-INSERT INTO productos (nombre, precio, stock)
-VALUES ('Alfombrilla', 9.99, 50);
+-- 10. Insertar 3 productos
+INSERT INTO productos (nombre, precio, stock) VALUES
+('Alfombrilla', 9.99, 50),
+('Cable HDMI', 7.50, 40),
+('Memoria USB 64GB', 12.25, 35);
 
 -- 11. Actualizar el precio de un producto
 UPDATE productos SET precio = 99.99 WHERE id = 1;

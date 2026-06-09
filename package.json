@@ -1,13 +1,6 @@
 {
-  "name": "web-prueba",
-  "version": "1.0.0",
-  "description": "Prueba práctica - Desarrollo de APIs con Express y MySQL",
-  "main": "index.js",
-  "type": "module",
-  "scripts": {
-    "start": "node index.js"
-  },
   "dependencies": {
-    "express": "^5.1.1"
-  }
+    "express": "^5.2.1"
+  },
+  "type": "module"
 }

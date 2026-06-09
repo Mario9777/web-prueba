@@ -13,10 +13,10 @@ El servidor queda activo en `http://localhost:3000`.
 
 ## Ejercicios
 
-### Ejercicio 1 - API REST básica
-- `GET /saludo` → devuelve "Hola mundo"
+### Ejercicio 1 - API REST sin persistencia
+- `GET /saludo` → `{ "mensaje": "Hola alumno" }`
 - `GET /fecha` → devuelve la fecha actual
-- `GET /hora` → devuelve la hora actual
+- `GET /sumar?a=2&b=3` → devuelve la suma de los parámetros
 
 ### Ejercicio 2 - CRUD en memoria
 Operaciones sobre un array en memoria (sin base de datos):
@@ -33,8 +33,8 @@ Las tareas se leen y se guardan en `tareas.json`:
 - `DELETE /tareas/:id`
 
 ### Ejercicio 4 - Consumir un servicio externo
-- `GET /externo/tareas` → consume una API pública con `fetch`.
+- `GET /externo/tareas` → consume una API pública de terceros con `fetch`.
 
 ### Ejercicio 5 - Consultas a base de datos
-- `db.sql` → base de datos de partida.
+- `db.sql` → base de datos de partida (`tienda`).
 - `consultas.sql` → las 20 consultas resueltas.
