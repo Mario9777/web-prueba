@@ -1,0 +1,64 @@
+### Peticiones para probar la API (extensión REST Client de VS Code)
+### Se ejecuta un ejercicio cada vez:  node ejercicioN.js
+### Todos los servidores escuchan en el puerto 3000.
+
+@host = http://localhost:3000
+
+############################################
+# EJERCICIO 1 - API REST sin persistencia
+############################################
+
+### Saludo
+GET {{host}}/saludo
+
+### Fecha actual
+GET {{host}}/fecha
+
+### Suma de dos números
+GET {{host}}/sumar?a=2&b=3
+
+
+############################################
+# EJERCICIO 2 - CRUD en memoria
+############################################
+
+### Listar tareas
+GET {{host}}/tareas
+
+### Crear una tarea
+POST {{host}}/tareas
+Content-Type: application/json
+
+{
+  "titulo": "Estudiar JS"
+}
+
+### Borrar la tarea con índice 0
+DELETE {{host}}/tareas/0
+
+
+############################################
+# EJERCICIO 3 - Persistencia con fichero JSON
+############################################
+
+### Listar tareas del fichero
+GET {{host}}/tareas-db
+
+### Crear una tarea en el fichero
+POST {{host}}/tareas-db
+Content-Type: application/json
+
+{
+  "titulo": "Repasar SQL"
+}
+
+### Borrar la tarea con índice 0
+DELETE {{host}}/tareas-db/0
+
+
+############################################
+# EJERCICIO 4 - Consumir un servicio externo
+############################################
+
+### Edad estimada a partir de un nombre
+GET {{host}}/edad?name=Juan

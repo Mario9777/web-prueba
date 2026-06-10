@@ -1,3 +1,6 @@
+-- Base de datos de partida de la prueba (estará disponible antes de empezar).
+-- Tienda online: clientes, productos, pedidos y líneas de pedido.
+
 DROP DATABASE IF EXISTS tienda;
 CREATE DATABASE tienda;
 USE tienda;
@@ -6,14 +9,13 @@ CREATE TABLE clientes (
     id INT AUTO_INCREMENT PRIMARY KEY,
     nombre VARCHAR(100),
     email VARCHAR(100),
-    ciudad VARCHAR(50)
+    ciudad VARCHAR(100)
 );
 
 INSERT INTO clientes (nombre, email, ciudad) VALUES
-('Ana López', 'ana@gmail.com', 'Madrid'),
-('Juan Pérez', 'juan@hotmail.com', 'Toledo'),
-('María García', 'maria@gmail.com', 'Madrid'),
-('Carlos Ruiz', 'carlos@yahoo.com', 'Sevilla'),
+('Ana López', 'ana@email.com', 'Madrid'),
+('Luis Pérez', 'luis@hotmail.com', 'Sevilla'),
+('María García', 'maria@email.com', 'Madrid'),
 ('Lucía Martín', 'lucia@gmail.com', 'Valencia');
 
 CREATE TABLE productos (
@@ -24,11 +26,10 @@ CREATE TABLE productos (
 );
 
 INSERT INTO productos (nombre, precio, stock) VALUES
-('Teclado mecánico', 85.99, 15),
-('Ratón inalámbrico', 25.50, 30),
-('Monitor 24 pulgadas', 149.90, 8),
-('Auriculares', 45.00, 12),
-('Disco SSD 1TB', 120.00, 5),
+('Teclado', 25.99, 10),
+('Ratón', 15.50, 25),
+('Monitor 24 pulgadas', 149.99, 8),
+('Disco duro', 89.00, 12),
 ('Webcam HD', 35.75, 20);
 
 CREATE TABLE pedidos (
@@ -39,12 +40,11 @@ CREATE TABLE pedidos (
 );
 
 INSERT INTO pedidos (cliente_id, fecha) VALUES
-(1, '2026-01-10'),
-(1, '2026-01-12'),
-(2, '2026-01-13'),
-(3, '2026-01-14'),
-(3, '2026-01-15'),
-(5, '2026-01-16');
+(1, '2024-01-15'),
+(2, '2024-01-16'),
+(1, '2024-02-10'),
+(3, '2024-03-05'),
+(4, '2024-03-12');
 
 CREATE TABLE lineas_pedido (
     id INT AUTO_INCREMENT PRIMARY KEY,
@@ -56,14 +56,9 @@ CREATE TABLE lineas_pedido (
 );
 
 INSERT INTO lineas_pedido (pedido_id, producto_id, cantidad) VALUES
-(1, 1, 1),
-(1, 2, 2),
-(2, 3, 1),
-(3, 2, 1),
-(3, 4, 2),
-(4, 5, 1),
-(4, 6, 1),
-(5, 1, 1),
-(5, 3, 1),
-(6, 4, 2),
-(6, 2, 1);
+(1, 1, 2),
+(1, 3, 1),
+(2, 2, 1),
+(3, 5, 3),
+(4, 4, 1),
+(5, 2, 2);
